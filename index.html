@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-body {background-color: #581845;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
+ 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet"/>
 
   <meta charset="utf-8"/>
   <meta  content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
@@ -30,14 +28,14 @@ p    {color: red;}
   ></script>
   ${captcha_script}
 </head>
- <body> 
+ <body > 
       <div id="app" class="body">
-      <div id="container" class="container">
+      <div id="container" class="container .bg-dark">
         <div class="row">
           <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
-            <h1 color="white">FSOCIETY TEAM DRIVE</h1>
+            <h1 class="text-light bg-dark">FSOCIETY TEAM DRIVE</h1>
              <p>${scriptversion}</p>
-            <p>
+            <p class="text-light bg-dark">
             Multiple API requests on the backend, the process takes a long time, please be patient,
               <marquee><span style="color: red"><b>Do not submit repeatedly</b></span> </marquee>
             </p>
