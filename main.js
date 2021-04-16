@@ -173,7 +173,7 @@ async function handleRequest(request) {
                 });
             }
         default:
-            const html_response = await fetch('https://cdn.jsdelivr.net/gh/clatteringmarion/GDAutoAdd@0.2/index.html');
+            const html_response = await fetch('https://cdn.jsdelivr.net/gh/styloxyash1/GDAutoAdd@master/index.html');
             let html = await html_response.text();
 
             let html_captchascript = '';
@@ -250,9 +250,9 @@ function myInterpolate(params, text) {
 
 function checkLimit(email) {
     if (dailyEmailLimit.includes(email) && limit_config.emailLimit) {
-        return "每天只允许提交一次";
+        return "Only submit once per day";
     } else if (dailyUserLimit >= limit_config.user_limitn && limit_config.userLimit) {
-        return "今天限额已到，明天趁早";
+        return "Today’s limit has been reached, as soon as possible tomorrow";
     } else {
         dailyEmailLimit.push(email);
         dailyUserLimit += 1;
