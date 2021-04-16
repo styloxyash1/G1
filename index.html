@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
           name="viewport"
   />
-  <title>加入Google TeamDrive</title>
+  <title>FSOCIETY TEAM DRIVE</title>
   <link
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           rel="stylesheet"
@@ -31,30 +31,32 @@
       <div id="container" class="container">
         <div class="row">
           <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
-            <h1>加入Google TeamDrive</h1>
+            <h1>FSOCIETY TEAM DRIVE</h1>
              <p>${scriptversion}</p>
             <p>
-              后端多个API请求, 过程耗时较长, 请耐心等待,
-              <span style="color: red"><b>切勿重复提交</b></span>
+            Multiple API requests on the backend, the process takes a long time, please be patient,
+              <marquee><span style="color: red"><b>Do not submit repeatedly</b></span> </marquee>
             </p>
             <br />
             <div class="info-form text-left">
               <form id="teamDriveForm">
                 <div class="form-group">
                   <label for="emailAddress" class="sr-only">
-                    您的GMail邮箱地址
+                   Your Gmail address
                   </label>
                   <input
                           type="email"
                           class="form-control"
                           id="emailAddress"
-                          placeholder="您的GMail邮箱地址"
+                          placeholder="Your Gmail address"
                   />
                 </div>
                 ${captcha_prompt}
                 <div class="col-md-12 text-center">
-                  <button class="btn btn-success" name="method" type="submit" value="add">加入</button>
-                  <button class="btn btn-danger" name="method" type="submit" value="remove">移除</button>
+                  <button class="btn btn-success" name="method" type="submit" value="add">
+Join</button>
+                  <button class="btn btn-danger" name="method" type="submit" value="remove">Remove
+</button>
                 </div>
               </form>
             </div>
@@ -74,11 +76,12 @@
           <div class="modal-body text-center">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
-                <span class="sr-only">正在创建中...</span>
+                <span class="sr-only">Being created...</span>
               </div>
             </div>
             <div clas="loader-txt">
-              <p>正在创建中...</p>
+              <p>
+Being created...</p>
             </div>
           </div>
         </div>
@@ -120,11 +123,11 @@
           }),
           success: function(data) {
             $("#loadMe").modal("hide");
-            alert("成功!");
+            alert("success!");
           },
           error: function(request, status, error) {
             $("#loadMe").modal("hide");
-            alert("失败!" + request.responseText);
+            alert("failure!" + request.responseText);
           },
           contentType: "application/json"
         });
